@@ -4,9 +4,6 @@ const { prompt } = require("inquirer");
 const { writeFile } = require("fs");
 const { promisify } = require("util");
 
-//Import questions.js
-// const questions = require("./lib/questions");
-
 // Import template.js
 const generateMarkdown = require("./assets/generateMarkdown");
 
@@ -20,8 +17,8 @@ const questions = [
     type: "input",
     message: "What is your project title?",
     name: "Title",
-    validate: function (title) {
-      if (title) {
+    validate: function (Title) {
+      if (Title) {
         return true;
       }
 
@@ -72,8 +69,16 @@ const questions = [
     type: "list",
     message: "Please select a license for your project.",
     name: "License",
-    choices: ["Apache", "GNU`" "ISC", "MIT", "PERL", "SIL", "WTFPL", "None"],
+    choices: ["Apache", "GNU", "ISC", "MIT", "PERL", "SIL", "WTFPL", "None"],
   },
+
+  {
+    type: "input",
+    message: "Who contributed to this project?",
+    name: "Contributors",
+    default: "Mike",
+  },
+
   {
     //How to test your project
     type: "input",
@@ -112,13 +117,11 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  function writeToFile(fileName, data) {
-    writeFile(fileName, data, (err) => {
-      if (err) {
-        throw err;
-      }
-    });
-  }
+  writeFile(fileName, data, (err) => {
+    if (err) {
+      throw err;
+    }
+  });
 }
 
 // TODO: Create a function to initialize app
@@ -127,7 +130,7 @@ function init() {
     prompt(questions).then((answers) => {
       const response = generateMarkdown(answers);
       console.log(answers);
-
+      console.log(response);
       writeToFile("README.md", response);
     });
   }

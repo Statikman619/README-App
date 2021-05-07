@@ -1,32 +1,31 @@
-# README APP
+# README
 
   ## Table of Contents
 * [Title](#Title)
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)]
+
+
 
 
 * [Test](#test)
 * [Username](#username)
 * [Email](#license)
 ## Description
-README Generator
+READMEAPP
 ## Installation 
-NPM Install
+install npm
 ## Usage 
-Instal locally and run with NPM Start
-## License
-MIT
+install npm locally
+
 ## Contributors
 Mike
 ## Test
 npm test
 ## Questions
 Contact me:
-Github:[Statikman619](https://github.com/Statikman619)
+Github:[statikman619](https://github.com/Statikman619)
 Email:[martinez.michael02@gmail.com](https://github.com/Statikman619)
 
 

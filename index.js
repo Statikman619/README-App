@@ -5,10 +5,10 @@ const { writeFile } = require("fs");
 const { promisify } = require("util");
 
 //Import questions.js
-const questions = require("./lib/questions");
+// const questions = require("./lib/questions");
 
 // Import template.js
-const generateREADME = require("./lib/template");
+const generateMarkdown = require("./assets/generateMarkdown");
 
 // Wrap fs.writeFile inside util.promisify
 const writeFileAsync = promisify(writeFile);
@@ -20,87 +20,93 @@ const questions = [
     type: "input",
     message: "What is your project title?",
     name: "Title",
-    validate: function(title) {
-        if (title) {
-            return true;
-        }
+    validate: function (title) {
+      if (title) {
+        return true;
+      }
 
-        return 'A professional README has a project title.';
+      return "A professional README has a project title.";
+    },
   },
   {
     //Describe your project
     type: "input",
     message: "Describe your project",
     name: "Description",
-    validate: function(Description) {
-        if (Description) {
-            return true;
-        }
+    validate: function (Description) {
+      if (Description) {
+        return true;
+      }
 
-        return 'A professional README provides a Description of the project.';
+      return "A professional README provides a Description of the project.";
+    },
   },
   {
     //What should be installed?
     type: "input",
     message: "What are the steps required to install your project?",
     name: "Installation",
-    validate: function(install) {
-        if (install) {
-            return true;
-        }
+    validate: function (install) {
+      if (install) {
+        return true;
+      }
 
-        return 'A professional README provides steps on how to install the project.';
+      return "A professional README provides steps on how to install the project.";
+    },
   },
   {
     //Instructions for your project
     type: "input",
     message: "Provide instructions for using your project.",
     name: "Usage",
-    validate: function(use) {
-        if (use) {
-            return true;
-        }
+    validate: function (use) {
+      if (use) {
+        return true;
+      }
 
-        return 'A professional README provides instructions on how to use the project.';
+      return "A professional README provides instructions on how to use the project.";
+    },
   },
   {
     //select your License
     type: "list",
     message: "Please select a license for your project.",
     name: "License",
-    choices: ["MIT", "GVL-GPL 3.0", "APACHE 2.0", "BSD 3", "None"],
+    choices: ["MIT", "GNU`", "APACHE 2.0", "BSD 3", "None"],
   },
   {
     //How to test your project
     type: "input",
     message: "How do you test your project?",
     name: "Test",
-    default: 'npm test'
+    default: "npm test",
   },
   {
     //What is your Github username?
     type: "input",
     message: "What is your Github username?",
     name: "Username",
-    validate: function(username) {
-        if (username) {
-            return true;
-        }
+    validate: function (username) {
+      if (username) {
+        return true;
+      }
 
-        return 'It is required to enter your github username.';
+      return "It is required to enter your github username.";
+    },
   },
   {
     //What is your email?
     type: "input",
     message: "What is your email?",
     name: "Email",
-    validate: function(email) {
-        let pass = email.match(/\S+@\S+\.\S+/g);
-        if (pass) {
-            return true;
-        }
+    validate: function (email) {
+      let pass = email.match(/\S+@\S+\.\S+/g);
+      if (pass) {
+        return true;
+      }
 
-        return 'Please enter a valid email.';
+      return "Please enter a valid email.";
+    },
   },
 ];
 

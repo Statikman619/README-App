@@ -50,10 +50,10 @@ function generateMarkdown(data) {
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
+${renderLicenseLink(data.License)}
 * [Test](#test)
 * [Username](#username)
 * [Email](#license)
-${renderLicenseLink(data.License)}
 
 ## Description
 ${data.Description}
@@ -61,6 +61,7 @@ ${data.Description}
 ${data.Installation}
 ## Usage 
 ${data.Usage}
+${renderLicenseSection(data.License)}
 ## Contributors
 ${data.Contributors}
 ## Test
@@ -69,7 +70,6 @@ ${data.Test}
 Contact me:
 Github:[${data.Username}](https://github.com/Statikman619)
 Email:[${data.Email}](https://github.com/Statikman619)
-${renderLicenseSection(data.License)}
 `;
 }
 

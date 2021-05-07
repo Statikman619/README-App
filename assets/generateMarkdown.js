@@ -36,7 +36,7 @@ function renderLicenseSection(license) {
   if (license === "None") {
     return "";
   } else {
-    return `## License ${data.License}`;
+    return `## License ${license}`;
   }
 }
 
@@ -44,25 +44,23 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.Title}
 
+  ${renderLicenseBadge(data.License)}
   ## Table of Contents
 * [Title](#Title)
 * [Description](#description)
 * [Installation](#installation)
 * [Usage](#usage)
-${renderLicenseLink(data.License)}
-${renderLicenseBadge(data.License)}
-
-
 * [Test](#test)
 * [Username](#username)
 * [Email](#license)
+${renderLicenseLink(data.License)}
+
 ## Description
 ${data.Description}
 ## Installation 
 ${data.Installation}
 ## Usage 
 ${data.Usage}
-${renderLicenseSection(data.License)}
 ## Contributors
 ${data.Contributors}
 ## Test
@@ -71,8 +69,7 @@ ${data.Test}
 Contact me:
 Github:[${data.Username}](https://github.com/Statikman619)
 Email:[${data.Email}](https://github.com/Statikman619)
-
-
+${renderLicenseSection(data.License)}
 `;
 }
 

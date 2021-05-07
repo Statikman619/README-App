@@ -6,6 +6,10 @@ function renderLicenseBadge(license) {
   } else if (license === "GNU") {
     return "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
   }
+  else(license === "SIL") {
+    return "[[![License: Open Font-1.1](https://img.shields.io/badge/License-OFL%201.1-lightgreen.svg)](https://opensource.org/licenses/OFL-1.1)]"
+  }if (license === "WTFPL")
+   return "[[![License: WTFPL](https://img.shields.io/badge/License-WTFPL-brightgreen.svg)](http://www.wtfpl.net/about/)]"
 }
 
 // TODO: Create a function that returns the license link

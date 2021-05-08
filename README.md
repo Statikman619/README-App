@@ -1,4 +1,4 @@
-#Github Repositiry and #GoogleDoc
+*Github Repositiry and *GoogleDoc
 https://github.com/Statikman619/README-App
 https://drive.google.com/file/d/14e-TmEIRHbLR3DFNk7hfR2HD7VO21HNc/view
 

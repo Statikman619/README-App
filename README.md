@@ -25,7 +25,7 @@ https://drive.google.com/file/d/14e-TmEIRHbLR3DFNk7hfR2HD7VO21HNc/view
 ## Description
 My project creates a personalized README for any project. Using Node.js users can enter their own input to answer each prompt. If you just hit enter you will be given a propt telling you a specific reason as to why it can not be left blank. You're also given the option to select a type of licensing that will displayed as a license banner next to the title, and a license section in the README file will be created with the license information.
 ## Installation 
-install node.js
+install node.js in the command line type npm init -y then npm i inquirer
 ## Usage 
 Open up the terminal and run "node index.js" and follow the prompts
 ## License MIT

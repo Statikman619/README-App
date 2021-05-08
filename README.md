@@ -1,5 +1,7 @@
-*Github Repositiry and *GoogleDoc
+*Github Repositiry
 https://github.com/Statikman619/README-App
+
+*GoogleDoc
 https://drive.google.com/file/d/14e-TmEIRHbLR3DFNk7hfR2HD7VO21HNc/view
 
 # README APP

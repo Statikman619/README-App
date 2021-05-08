@@ -12,16 +12,16 @@
 * [Email](#license)
 
 ## Description
-README Generator
+My project creates a personalized README for any project.
 ## Installation 
 install node.js
 ## Usage 
-install npm locally and run node index.js in the command line
+Open up the terminal and run "node index.js" and follow the prompts
 ## License MIT
 ## Contributors
-Mike with the help of office hours and a tutor
+Mike with the help of office hours and my tutor
 ## Test
-node index.js
+type node index.js in the command line
 ## Questions
 Contact me:
 Github:[Statikman619](https://github.com/Statikman619)

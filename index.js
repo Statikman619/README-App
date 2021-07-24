@@ -76,7 +76,8 @@ const questions = [
     type: "input",
     message: "Who contributed to this project?",
     name: "Contributors",
-    default: "Mike",
+    default:
+      "Mike with the help of Herm, Elma, Joey during office hours and my awesome tutor Andrew.",
   },
 
   {
@@ -91,6 +92,7 @@ const questions = [
     type: "input",
     message: "What is your Github username?",
     name: "Username",
+    default: "Statikman619",
     validate: function (username) {
       if (username) {
         return true;
@@ -104,6 +106,7 @@ const questions = [
     type: "input",
     message: "What is your email?",
     name: "Email",
+    default: "martinez.michael02@gmail.com",
     validate: function (email) {
       let pass = email.match(/\S+@\S+\.\S+/g);
       if (pass) {
